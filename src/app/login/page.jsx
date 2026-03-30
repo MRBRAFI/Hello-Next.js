@@ -1,5 +1,6 @@
+import Title from "@/Components/Title";
 import React from "react";
 
 export default function login() {
-  return <div>This is a login Page</div>;
+  return <Title>This is login page</Title>;
 }
