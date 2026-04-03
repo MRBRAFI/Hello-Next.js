@@ -12,7 +12,7 @@ export default function Header() {
         <Link href="/about_us" className="text-xl font-semibold">
           About us
         </Link>
-        <Link href="/about_us" className="text-xl font-semibold">
+        <Link href="/stories" className="text-xl font-semibold">
           Stories
         </Link>
         <Link href="/tutorials" className="text-xl font-semibold">
