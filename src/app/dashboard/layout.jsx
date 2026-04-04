@@ -1,3 +1,4 @@
+import NavLink from "@/Components/NavLink";
 import Link from "next/link";
 import React from "react";
 
@@ -14,9 +15,10 @@ export default function DashboardLayout({ children }) {
         </Link>
 
         <div className="flex flex-col text-red-400 justify-center">
-          <Link href={"/dashboard/add-story"}>Add Story</Link>
-          <Link href={"/dashboard/my-profile"}>My Profile</Link>
-          <Link href={"/dashboard/settings"}>Settings</Link>
+          <NavLink href={"/"}>Home Page</NavLink>
+          <NavLink href={"/dashboard/add-story"}>Add Story</NavLink>
+          <NavLink href={"/dashboard/my-profile"}>My Profile</NavLink>
+          <NavLink href={"/dashboard/settings"}>Settings</NavLink>
         </div>
       </div>
       <div className="col-span-9 p-5 rounded-xl border-2 border-white mr-2">

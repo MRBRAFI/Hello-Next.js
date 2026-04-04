@@ -1,7 +1,18 @@
+"use client";
+
+import DashboardLayout from "@/app/dashboard/layout";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
+import NavLink from "./NavLink";
 
 export default function Header() {
+  const pathName = usePathname();
+  console.log(pathName);
+
+  if (pathName.startsWith("/dashboard")) {
+    return <></>;
+  }
   return (
     <header className="px-4 py-3 border-b-2 border-gray-500 flex justify-between items-center">
       <Link href={"/"} className="text-lg font-semibold">
@@ -9,21 +20,21 @@ export default function Header() {
       </Link>
 
       <nav className="flex gap-8">
-        <Link href="/about_us" className="text-xl font-semibold">
+        <NavLink href="/about_us" className="text-xl font-semibold">
           About us
-        </Link>
-        <Link href="/stories" className="text-xl font-semibold">
+        </NavLink>
+        <NavLink href="/stories" className="text-xl font-semibold">
           Stories
-        </Link>
-        <Link href="/tutorials" className="text-xl font-semibold">
+        </NavLink>
+        <NavLink href="/tutorials" className="text-xl font-semibold">
           Tutorials
-        </Link>
-        <Link href="/login" className="text-xl font-semibold">
+        </NavLink>
+        <NavLink href="/login" className="text-xl font-semibold">
           Login
-        </Link>
-        <Link href="/register" className="text-xl font-semibold">
+        </NavLink>
+        <NavLink href="/register" className="text-xl font-semibold">
           Register
-        </Link>
+        </NavLink>
       </nav>
     </header>
   );
